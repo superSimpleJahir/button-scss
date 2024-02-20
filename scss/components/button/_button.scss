@@ -224,7 +224,7 @@ button,
 }
 
 .applynow {
-  @include setBgColor($blue-green-500, $white);
+  @include setBgColor($blue-green-400, $white);
   @include flex;
   padding: size(10) size(14);
   gap: size(10);
