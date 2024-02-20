@@ -1,0 +1,32 @@
+@use "../../global" as *;
+@use "../../partials" as *;
+
+#megamenu {
+  width: 260px;
+
+  .categorylist {
+    list-style: none;
+    padding: 0;
+
+    .categorylist-item {
+      .categorylist-link {
+        @include flex-center-vert;
+        padding: 14px 18px;
+        transition: all 0.3s ease;
+        &:hover {
+          background: #eaf1ef;
+        }
+
+        img {
+        }
+        .text {
+          margin-left: 20px;
+          width: 160px;
+        }
+
+        .arrow {
+        }
+      }
+    }
+  }
+}
