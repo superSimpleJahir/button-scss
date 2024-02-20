@@ -1,0 +1,181 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+.doctorprofile {
+  margin-block: size(40);
+  @include breakpoint(mobile576) {
+    margin-top: size(50);
+  }
+  @include breakpoint(mobile768) {
+    margin-top: size(60);
+  }
+  @include breakpoint(tab992) {
+    margin-top: size(100);
+  }
+  &-sidebar {
+    @include flex-column;
+    gap: size(12);
+    border: 1px solid $inputborder;
+    @include radius(22);
+    align-items: center;
+    padding: size(24);
+    text-align: center;
+    @include breakpoint(tab992) {
+      text-align: left;
+      align-items: flex-start;
+    }
+  }
+  .doctorthumb {
+    img {
+    }
+  }
+  &-sidebar_middle {
+    .title {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 28px;
+      color: $neutral-950;
+    }
+    .designation {
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 20px;
+      color: $neutral-950;
+      opacity: 0.5;
+    }
+  }
+  .des {
+    color: $neutral-600;
+    color: $neutral-600;
+    font-size: size(14);
+    font-style: normal;
+    font-weight: 400;
+    line-height: size(24);
+  }
+  .btn-submit {
+    color: $white;
+    padding: 0 size(10);
+    width: size(258);
+    height: size(40);
+    text-align: right;
+    leading-trim: both;
+    text-edge: cap;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 22px;
+    @include breakpoint(tab992) {
+      @include w100;
+    }
+    @include hover {
+      color: $blue-green-500;
+    }
+  }
+
+  .doctorprofiledetails {
+    @include flex-column;
+    gap: size(30);
+    @include breakpoint(tab992) {
+      gap: size(60);
+    }
+    .introduction {
+      @include flex-column;
+      gap: size(16);
+      .title {
+        color: $neutral-950;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 42px;
+      }
+      .des {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 26px;
+        color: $neutral-600;
+        text-align: justify;
+      }
+    }
+    .doctorinfobox {
+      @include flex-column;
+      gap: size(32);
+      &-header {
+        @include flex-column;
+        gap: size(16);
+        .title {
+          font-size: 28px;
+          font-weight: 600;
+          line-height: 38px;
+          color: $neutral-950;
+        }
+        .des {
+        }
+      }
+      .infolist {
+        display: grid;
+        grid-template-columns: 1fr;
+        list-style: none;
+        padding: 0;
+        grid-row-gap: size(12);
+        @include breakpoint(mobile768) {
+          grid-template-columns: 1fr 1fr;
+          grid-row-gap: size(24);
+        }
+        li {
+          @include flex;
+          gap: size(12);
+          flex-wrap: nowrap;
+          align-items: flex-start;
+          .icon {
+            flex-shrink: 0;
+          }
+          .name {
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 24px;
+            color: $neutral-950;
+            @include breakpoint(mobile576) {
+              font-size: size(16);
+            }
+
+            span {
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 24px;
+              color: $neutral-600;
+              @include breakpoint(mobile576) {
+                font-size: size(16);
+              }
+            }
+          }
+        }
+        &.singlelist {
+          grid-template-columns: 1fr;
+        }
+      }
+    }
+  }
+}
+.bookappoinment {
+  background: $blue-green-700 url(../../assets/images/doctors/bookbg.png);
+  background-size: cover;
+  @include radius(36);
+  padding: size(30);
+  @include breakpoint(mobile576) {
+    padding: size(50);
+  }
+  @include breakpoint(tab992) {
+    padding: size(70);
+  }
+  .appoinmentContent {
+    @include flex-column;
+    gap: size(32);
+    align-items: start;
+  }
+  .title {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 38px;
+    color: $white;
+  }
+}

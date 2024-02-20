@@ -1,0 +1,120 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+.services {
+  padding: size(50) size(0);
+  @include breakpoint(tab992) {
+    padding: size(100) size(0);
+  }
+  .single-service {
+    @include radius(16);
+    margin-bottom: 40px;
+    &.one {
+      background-color: $blue-green-50;
+    }
+    &.two {
+      background: $green-50;
+      .service-thumb {
+        border-color: $green-50;
+      }
+    }
+
+    &.three {
+      background: #f8f3e9;
+      .service-thumb {
+        border-color: #f8f3e9;
+      }
+    }
+    &.four {
+      background: #efeffd;
+      .service-thumb {
+        border-color: #efeffd;
+      }
+    }
+    &.five {
+      background: $blue-green-50;
+      .service-thumb {
+        border-color: $blue-green-50;
+      }
+    }
+    .textbox {
+      padding: size(22);
+      @include breakpoint(mobile576) {
+        padding: size(40);
+      }
+      @include breakpoint(desktop1400) {
+        padding: size(66) size(80);
+      }
+      @include flex;
+      flex-direction: column;
+      gap: size(24);
+      justify-content: center;
+      height: 100%;
+      .title {
+        color: $neutral-950;
+        font-weight: 700;
+        line-height: 46px;
+      }
+      .des {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 20px;
+        color: $neutral-900;
+      }
+    }
+
+    .service-thumb {
+      @include w100;
+      height: 100%;
+      @include radius(30);
+      overflow: hidden;
+      border: size(16) solid $blue-green-50;
+      img {
+        @include wh100;
+        overflow: hidden;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+// animation
+.service-thumb {
+  position: relative;
+}
+.service-thumb::before {
+  position: absolute;
+  top: 0;
+  left: -75%;
+  z-index: 2;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+  background: -webkit-linear-gradient(
+    left,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  -webkit-transform: skewX(-25deg);
+  transform: skewX(-25deg);
+}
+.service-thumb:hover::before {
+  -webkit-animation: shine 0.75s;
+  animation: shine 0.75s;
+}
+@-webkit-keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+@keyframes shine {
+  100% {
+    left: 125%;
+  }
+}

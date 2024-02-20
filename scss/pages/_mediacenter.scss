@@ -1,0 +1,33 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+.mediacenter {
+  padding: size(64) size(8);
+
+  .nav-tabs {
+    background: $white;
+    margin-bottom: size(24);
+    border: none;
+    justify-content: center;
+    max-width: size(280);
+    @include double-radius(top, left, 10, top, right, 10);
+    margin-inline: auto;
+    overflow: hidden;
+
+    .nav-link {
+      @include setBgColor($white, $neutral-400);
+      @include border(solid, 1, $neutral-100);
+      @include radius(0);
+      margin: size(0);
+      width: size(140);
+      height: size(56);
+      @include flex-center;
+      text-align: center;
+
+      &.active {
+        @include setBgColor($blue-green-600, $white);
+        border-color: $blue-green-600;
+      }
+    }
+  }
+}

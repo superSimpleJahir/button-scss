@@ -1,0 +1,127 @@
+@use "../global" as *;
+@use "../partials" as *;
+.healthpackagetop {
+  padding: size(50) size(0);
+  @include breakpoint(tab992) {
+    padding: size(100) size(0);
+  }
+  .leftcol {
+    @include h100;
+    padding: 16px;
+
+    &-content {
+      @include flex-column;
+      justify-content: center;
+      @include h100;
+      gap: size(27);
+    }
+    .title {
+      font-weight: 700;
+      line-height: 46px;
+      color: $neutral-950;
+      text-align: center;
+      @include breakpoint(mobile576) {
+        text-align: left;
+      }
+    }
+    .des {
+      color: $neutral-900;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 20px;
+      text-align: justify;
+      @include breakpoint(mobile576) {
+        text-align: left;
+      }
+    }
+  }
+  .topsecthumb {
+    @include w100;
+    height: 100%;
+    @include radius(30);
+    overflow: hidden;
+    border: size(16) solid $blue-green-50;
+    @include breakpoint(tab992) {
+      width: size(430);
+      height: size(430);
+    }
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 2;
+      display: block;
+      content: "";
+      width: 0;
+      height: 0;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 100%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+    }
+    &:hover::before {
+      opacity: 0.5;
+      background: rgba(213, 156, 34, 0.2);
+      animation: circle 0.75s;
+    }
+    img {
+      @include wh100;
+      overflow: hidden;
+      object-fit: cover;
+    }
+  }
+  .topsecthumb:hover {
+    animation: bloom ease-in-out 0.75s forwards;
+  }
+  @keyframes bloom {
+    0% {
+      filter: grayscale(0.8);
+    }
+    40% {
+      filter: grayscale(0.5);
+    }
+    100% {
+      filter: grayscale(0);
+    }
+  }
+  @keyframes circle {
+    0% {
+      opacity: 0.5;
+      background: rgba(213, 156, 34, 0.2);
+    }
+    40% {
+      opacity: 1;
+      background: rgba(213, 34, 160, 0.2);
+    }
+    100% {
+      width: 200%;
+      height: 200%;
+      opacity: 0;
+    }
+  }
+}
+
+.healthpackages {
+  padding-bottom: size(60);
+  @include breakpoint(tab992) {
+    padding-bottom: size(100);
+  }
+  &-top {
+    @include flex-column;
+    gap: size(5);
+    text-align: center;
+    margin-bottom: size(50);
+    .section-title {
+      font-weight: 700;
+      line-height: 48px;
+      color: $gray900;
+    }
+    .section-des {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 28px;
+      color: $footerbg;
+      opacity: 0.7;
+    }
+  }
+}

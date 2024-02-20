@@ -1,0 +1,155 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+.contactbanner {
+  @include w100;
+  height: size(247);
+  @include flex-center-vert;
+  text-align: center;
+  position: relative;
+
+  &-content {
+    @include flex-center-column;
+    gap: size(10);
+    padding-inline: size(8);
+    position: relative;
+    z-index: 10;
+
+    .bannertitle {
+      color: $blue-green-900;
+      font-size: size(24);
+      font-weight: 700;
+
+      @include breakpoint(tab992) {
+        font-size: size(30);
+      }
+
+      @include breakpoint(desktop1400) {
+        font-size: size(36);
+      }
+    }
+
+    .contacttext {
+      color: $neutral-600;
+      font-size: size(16);
+      font-weight: 400;
+
+      @include breakpoint(tab992) {
+        font-size: size(18);
+      }
+
+      @include breakpoint(desktop1400) {
+        font-size: size(20);
+      }
+    }
+  }
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    img {
+      @include wh100;
+      object-fit: cover;
+    }
+  }
+}
+
+.contactmain {
+  @include flex-column;
+  gap: size(32);
+  padding: size(48) size(8) size(64);
+
+  @include breakpoint(tab992) {
+    padding: size(80) size(8);
+    gap: size(64);
+  }
+
+  @include breakpoint(desktop1400) {
+    padding: size(120) size(8);
+  }
+}
+
+.contactdetails {
+  &-content {
+    @include border(solid, 1, $inputborder);
+    @include radius(24);
+    overflow: hidden;
+  }
+
+  .contactmap {
+    @include w100;
+    height: size(320);
+    @include flex-center;
+    overflow: hidden;
+
+    @include breakpoint(mobile768) {
+      height: size(420);
+    }
+
+    iframe {
+      @include wh100;
+    }
+  }
+
+  .contactinfo {
+    @include w100;
+    position: relative;
+    padding: size(24);
+
+    @include breakpoint(mobile768) {
+      height: size(420);
+    }
+
+    @include breakpoint(tab992) {
+      padding: size(48);
+    }
+
+    @include breakpoint(desktop1400) {
+      padding: size(64);
+    }
+
+    &-header {
+      position: relative;
+      z-index: 100;
+      padding-bottom: size(16);
+      @include flex-column;
+      gap: size(20);
+
+      .contactinfotitle {
+        color: $neutral-950;
+        font-size: size(24);
+        font-weight: 600;
+        line-height: 1.4;
+      }
+    }
+
+    &-body {
+      @include border-single(top, solid, 1, $neutral-600);
+      padding-top: size(16);
+      @include flex-column;
+      gap: size(10);
+      position: relative;
+      z-index: 100;
+
+      .socialtitle {
+        color: $neutral-950;
+        font-size: size(16);
+        font-weight: 600;
+        line-height: 1.75;
+      }
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+
+      img {
+        @include wh100;
+        object-fit: cover;
+      }
+    }
+  }
+}

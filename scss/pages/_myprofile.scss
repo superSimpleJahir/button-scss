@@ -1,0 +1,81 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+.myaccount {
+  padding: size(64) size(8);
+  
+  @include breakpoint(tab992) {
+    padding: size(96) size(8) size(128);
+  }
+
+  .myaccountinfo {
+    background: $white;
+    @include flex-column;
+    @include radius(32);
+    overflow: hidden;
+
+    &-header {
+      background: $blue-green-100;
+      @include border-single(bottom, solid, 1, $blue-green-100);
+      @include flex-center-between;
+      height: size(70);
+      padding-inline: size(24);
+  
+      .acctitle {
+        color: $titlecolor;
+        font-size: size(16);
+        font-weight: 700;
+        line-height: 1.5;
+      }
+    }
+  
+    &-body {
+      @include border(solid, 1, rgba($black, 0.10));
+      border-top: 0;
+      padding: size(24);
+
+      @include breakpoint(tab992) {
+        padding: size(24) size(24) size(80);
+      }
+
+      .table {
+        thead {
+          tr {
+            th {
+              color: $neutral-400;
+              font-size: size(13);
+              font-weight: 500;
+            }
+          }
+        }
+
+        tbody {
+          .name,
+          .phone,
+          .datetimetext {
+            color: $neutral-800;
+            font-size: size(11);
+            font-weight: 600;
+            line-height: 1.5;
+          }
+
+          .profinfo {
+            max-width: size(156);
+          }
+
+          .profname {
+            font-size: size(11);
+            color: $neutral-800;
+            font-weight: 600;
+          }
+
+          .btn-action {
+            @include square(20);
+            @include flex-center;
+            overflow: hidden;
+          }
+        }
+      }
+    }
+  }  
+}

@@ -1,0 +1,186 @@
+@use "../global" as *;
+@use "../partials" as *;
+.bookingform {
+  padding: size(30) size(8);
+  @include radius(20);
+  @include border(solid, 1, $inputborder);
+  @include breakpoint(mobile576) {
+    padding: size(50) size(32);
+    @include radius(28);
+  }
+  .formtitle {
+    color: $neutral-950;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+    margin-bottom: size(16);
+  }
+
+  .ui-widget-header {
+    background-color: transparent;
+    border-color: #f1f1f1;
+    @include border(solid, 1, $inputborder);
+  }
+
+  .ui-widget.ui-widget-content {
+    width: 100%;
+    border: none;
+  }
+
+  .ui-datepicker td {
+    padding: 5px !important;
+  }
+
+  .ui-datepicker td a {
+    background-color: #fff !important;
+    position: relative;
+    text-align: center;
+    padding: 10px 12px !important;
+    border: 0.962px solid #f1f1f1 !important;
+    border-radius: 8px;
+  }
+
+  .ui-datepicker td a.ui-state-active {
+    color: #5b5b5f;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .ui-datepicker td a::before {
+    position: absolute;
+    content: "";
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 14px;
+    width: 14px;
+    border: 1px solid #d9d9d9;
+    border-radius: 50%;
+  }
+
+  .ui-datepicker td a::after {
+    position: absolute;
+    content: "";
+    left: 8px;
+    height: 8px;
+    width: 8px;
+    border: 1px solid #1c94d1;
+    background: #1c94d1;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .ui-datepicker td a.ui-state-active::after {
+    opacity: 1;
+  }
+
+  @media (max-width: 576px) {
+    .ui-datepicker td {
+      padding: 3px !important;
+    }
+
+    .ui-datepicker td a {
+      text-align: right;
+      padding: 5px !important;
+      font-size: 13px !important;
+    }
+
+    #datepicker {
+    }
+  }
+}
+
+.times {
+  display: flex;
+  gap: size(10);
+  flex-wrap: wrap;
+  .time-lable {
+    @include border(solid, 1, $inputborder);
+    padding: size(14) size(4);
+    @include radius(8);
+    cursor: pointer;
+    color: var(--Neutral-400, #85868b);
+    leading-trim: both;
+    text-edge: cap;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    min-width: size(110);
+    text-align: center;
+    position: relative;
+    padding-left: size(18);
+  }
+  .time-lable::after {
+    @include square(14);
+    @include circle;
+    @include border(solid, 1, $neutral-100);
+    position: absolute;
+    content: "";
+    left: size(8);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .time-lable::before {
+    content: "";
+    top: 50%;
+    background: $blue-green-500;
+    @include square(8);
+    position: absolute;
+    left: size(11);
+    transform: translateY(-50%);
+    @include circle;
+    opacity: 0;
+  }
+  .time input[type="radio"]:checked + .time-lable::before {
+    opacity: 1;
+  }
+}
+
+.confirm {
+  padding: size(30) size(8);
+  @include radius(20);
+  @include border(solid, 1, $inputborder);
+  @include breakpoint(mobile576) {
+    padding: size(50) size(32);
+    @include radius(28);
+  }
+
+  &-content {
+    @include flex;
+    align-items: center;
+    gap: size(20);
+    .right {
+      @include flex-column;
+      gap: size(4);
+      .title {
+        color: var(--Neutral-Base-color-950, #19191A);
+        font-family: Inter;
+        font-size: 24.809px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 35.146px; /* 141.667% */
+      } 
+      .date {
+        color: var(--Neutral-500, #6A6B70);
+        font-family: Inter;
+        font-size: 16.539px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24.809px; /* 150% */
+      } 
+      .info {
+        color: var(--Neutral-500, #6A6B70);
+        font-family: Inter;
+        font-size: 13.438px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20.674px; /* 153.846% */
+      }
+    }
+  }
+}

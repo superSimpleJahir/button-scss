@@ -1,0 +1,269 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+.whoweare {
+  background: $white;
+  @include flex-column;
+  gap: size(40);
+  padding: size(24) size(8);
+
+  @include breakpoint(mobile768) {
+    padding: size(48) size(8);
+  }
+
+  @include breakpoint(tab992) {
+    padding: size(96) size(8);
+    gap: size(80);
+  }
+
+  .abouttitle {
+    color: $neutral-950;
+  }
+
+  .textbox {
+    max-width: size(900);
+  }
+
+  .abouttext {
+    color: $neutral-600;
+    font-size: size(16);
+    font-weight: 400;
+    
+    @include breakpoint(mobile768) {
+      font-size: size(18);
+    }
+    
+    @include breakpoint(tab992) {
+      font-size: size(20);
+    }
+  }
+
+  &-content {
+    @include border(solid, 1, $inputborder);
+    @include radius(40);
+    overflow: hidden;
+    padding: size(24);
+    
+    @include breakpoint(mobile768) {
+      padding: size(40);
+    }
+  }
+
+  .leftcontent {
+    @include flex-column;
+    gap: size(32);
+
+    &-header {
+      @include flex-column;
+      gap: size(24);
+
+      .whowetitle {
+        color: $neutral-950;
+        font-size: size(28);
+        font-weight: 600;
+      }
+
+      .whotext {
+        color: $neutral-600;
+        font-size: size(16);
+        font-weight: 400;
+        line-height: 1.625;
+      }
+    }
+
+    &-body {
+      @include flex-center-vert;
+      gap: size(12);
+
+      .docthumb {
+        @include square(56);
+        @include circle;
+        @include flex-center;
+        overflow: hidden;
+      }
+
+      .info {
+        .docname {
+          color: $neutral-950;
+          font-size: size(16);
+          font-weight: 600
+        }
+
+        .docpost {
+          color: rgba($neutral-950, 0.5);
+          font-size: size(13);
+          font-weight: 400;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+
+  .whowethumb {
+    @include radius(24);
+    @include wh100;
+    overflow: hidden;
+  }
+}
+
+.ourvision,
+.ourmission {
+  @include flex-column;
+  gap: size(40);
+  padding: size(24) size(8);
+
+  @include breakpoint(mobile768) {
+    padding: size(48) size(8);
+  }
+
+  @include breakpoint(tab992) {
+    padding: size(96) size(8);
+    gap: size(60);
+  }
+}
+
+.ourvision {
+  background: $green-50;
+
+  .visionbadge {
+    color: $green-500;
+    font-size: size(18);
+    font-weight: 600;
+  }
+
+  .visiontitle {
+    color: $neutral-950;
+    font-weight: 700;
+  }
+
+  .textbox {
+    max-width: size(910);
+  }
+
+  .visiontext {
+    color: $neutral-900;
+    font-size: size(16);
+    font-weight: 400;
+    
+    @include breakpoint(mobile768) {
+      font-size: size(18);
+    }
+    
+    @include breakpoint(tab992) {
+      font-size: size(20);
+    }
+  }
+
+  .visioncontent {
+    @include flex-column;
+    gap: size(32);
+  }
+
+  .visioninfo {
+    @include flex-column;
+    gap: size(12);
+    @include h100;
+
+    &-header {
+      @include flex-center-vert;
+      gap: size(10);
+
+      .visionicon {
+        @include square(24);
+        @include flex-center;
+        overflow: hidden;
+      }
+
+      .visiontitle {
+        color: $neutral-950;
+        font-size: size(24);
+        font-weight: 600;
+        width: calc(100% - size(34));
+      }
+    }
+
+    &-body {
+      min-height: size(78);
+
+      .visiontext {
+        color: $neutral-900;
+        font-size: size(16);
+        font-weight: 400;
+        line-height: 1.625;
+      }
+    }
+  }
+}
+
+.ourmission {
+  background: $white;
+
+  .missionbadge {
+    color: $blue-green-600;
+    font-size: size(18);
+    font-weight: 600;
+  }
+
+  .missiontitle {
+    color: $neutral-950;
+    font-weight: 700;
+  }
+
+  .textbox {
+    max-width: size(910);
+  }
+
+  .missiontext {
+    color: $neutral-600;
+    font-size: size(16);
+    font-weight: 400;
+    
+    @include breakpoint(mobile768) {
+      font-size: size(18);
+    }
+    
+    @include breakpoint(tab992) {
+      font-size: size(20);
+    }
+  }
+
+  .missioncontent {
+    @include flex-column;
+    gap: size(32);
+  }
+
+  .missioninfo {
+    @include flex-column;
+    gap: size(12);
+    @include h100;
+
+    &-header {
+      @include flex-center-vert;
+      gap: size(10);
+
+      .missionicon {
+        @include square(24);
+        @include flex-center;
+        overflow: hidden;
+      }
+
+      .missiontitle {
+        color: $neutral-950;
+        font-size: size(24);
+        font-weight: 600;
+        width: calc(100% - size(34));
+      }
+    }
+
+    &-body {
+      min-height: size(104);
+
+      .missiontext {
+        color: $neutral-600;
+        font-size: size(16);
+        font-weight: 400;
+        line-height: 1.625;
+      }
+    }
+  }
+}
