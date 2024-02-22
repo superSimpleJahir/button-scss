@@ -1803,11 +1803,25 @@ nav.nav1 ul li ul li a:hover {
 #megamenu {
   width: 260px;
 }
+#megamenu ::-webkit-scrollbar {
+  width: 5px;
+}
+#megamenu ::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 5px;
+}
 #megamenu .categorylist {
   list-style: none;
   padding: 0;
   height: 100vh;
-  overflow: scroll;
+  overflow-y: scroll;
+}
+#megamenu .categorylist ::-webkit-scrollbar {
+  width: 5px;
+}
+#megamenu .categorylist ::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 5px;
 }
 #megamenu .categorylist .categorylist-item {
   position: relative;
@@ -1843,7 +1857,7 @@ nav.nav1 ul li ul li a:hover {
   display: none;
   z-index: 1000;
   height: 100vh;
-  overflow: scroll;
+  overflow-y: scroll;
 }
 #megamenu .categorylist .categorylist-item .categorybox .subcategory {
   list-style: none;

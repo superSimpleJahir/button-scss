@@ -13,13 +13,25 @@
 }
 #megamenu {
   width: 260px;
-
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 5px;
+  }
   .categorylist {
     list-style: none;
     padding: 0;
     height: 100vh;
-    overflow: scroll;
-
+    overflow-y: scroll;
+    ::-webkit-scrollbar {
+      width: 5px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: red;
+      border-radius: 5px;
+    }
     .categorylist-item {
       position: relative;
       .categorylist-link {
@@ -48,7 +60,7 @@
         display: none;
         z-index: 1000;
         height: 100vh;
-        overflow: scroll;
+        overflow-y: scroll;
 
         .subcategory {
           list-style: none;
