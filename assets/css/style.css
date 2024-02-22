@@ -5,10 +5,13 @@
 	- Website: https://qtecsolution.com/
 ================================= */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
 html {
   box-sizing: border-box;
@@ -201,7 +204,7 @@ video::selection {
 body {
   background: hsl(0, 0%, 100%);
   color: #19191a;
-  font-family: "Inter", sans-serif;
+  font-family: "Jost", sans-serif;
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
@@ -217,7 +220,7 @@ h4,
 h5,
 h6 {
   margin: 0;
-  font-family: "Inter", sans-serif;
+  font-family: "Jost", sans-serif;
   text-wrap: balance;
 }
 h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, h5::-moz-selection, h6::-moz-selection {
@@ -290,7 +293,7 @@ select {
 .display-4,
 .display-5,
 .display-6 {
-  font-family: "Inter", sans-serif;
+  font-family: "Jost", sans-serif;
   text-wrap: balance;
 }
 
@@ -1804,6 +1807,9 @@ nav.nav1 ul li ul li a:hover {
   list-style: none;
   padding: 0;
 }
+#megamenu .categorylist .categorylist-item {
+  position: relative;
+}
 #megamenu .categorylist .categorylist-item .categorylist-link {
   display: flex;
   align-items: center;
@@ -1814,9 +1820,60 @@ nav.nav1 ul li ul li a:hover {
   background: #eaf1ef;
 }
 #megamenu .categorylist .categorylist-item .categorylist-link .text {
-  margin-left: 20px;
+  margin-left: 10px;
   width: 160px;
+  font-family: "Jost", sans-serif;
+  color: hsl(0, 0%, 0%);
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.6333333333;
 }
+#megamenu .categorylist .categorylist-item .categorylist-link .arrow {
+  color: hsl(0, 0%, 0%);
+}
+#megamenu .categorylist .categorylist-item .categorybox {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background: hsl(0, 0%, 100%);
+  width: 16.25rem;
+  height: 100%;
+  display: none;
+  z-index: 1000;
+}
+#megamenu .categorylist .categorylist-item .categorybox .subcategory {
+  list-style: none;
+  padding-left: 0;
+}
+#megamenu .categorylist .categorylist-item .categorybox .subcategory .subcategory-item .subcategory-link {
+  display: flex;
+  align-items: center;
+  padding: 14px 18px;
+  transition: all 0.3s ease;
+}
+#megamenu .categorylist .categorylist-item .categorybox .subcategory .subcategory-item .subcategory-link:hover {
+  background: #eaf1ef;
+}
+#megamenu .categorylist .categorylist-item .categorybox .subcategory .subcategory-item .subcategory-link .text {
+  margin-left: 10px;
+  width: 160px;
+  font-family: "Jost", sans-serif;
+  color: hsl(0, 0%, 0%);
+  font-size: 0.75rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.6333333333;
+}
+#megamenu .categorylist .categorylist-item:hover > .categorybox,
+#megamenu .categorylist .categorylist-item .categorybox:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+  min-width: 250px;
+  text-align: left;
+}
+
 table tr {
   vertical-align: middle;
 }
