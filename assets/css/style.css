@@ -1812,9 +1812,11 @@ nav.nav1 ul li ul li a:hover {
 }
 #megamenu .categorylist {
   list-style: none;
+  position: fixed;
+  top: 0;
+  left: 0;
   padding: 0;
   height: 100vh;
-  overflow-y: scroll;
 }
 #megamenu .categorylist ::-webkit-scrollbar {
   width: 5px;
@@ -1823,19 +1825,19 @@ nav.nav1 ul li ul li a:hover {
   background: red;
   border-radius: 5px;
 }
-#megamenu .categorylist .categorylist-item {
+#megamenu .categorylist-item {
   position: relative;
 }
-#megamenu .categorylist .categorylist-item .categorylist-link {
+#megamenu .categorylist-item .categorylist-link {
   display: flex;
   align-items: center;
   padding: 14px 18px;
   transition: all 0.3s ease;
 }
-#megamenu .categorylist .categorylist-item .categorylist-link:hover {
+#megamenu .categorylist-item .categorylist-link:hover {
   background: #eaf1ef;
 }
-#megamenu .categorylist .categorylist-item .categorylist-link .text {
+#megamenu .categorylist-item .categorylist-link .text {
   margin-left: 10px;
   width: 160px;
   font-family: "Jost", sans-serif;
@@ -1845,34 +1847,33 @@ nav.nav1 ul li ul li a:hover {
   font-style: normal;
   line-height: 1.6333333333;
 }
-#megamenu .categorylist .categorylist-item .categorylist-link .arrow {
+#megamenu .categorylist-item .categorylist-link .arrow {
   color: hsl(0, 0%, 0%);
 }
-#megamenu .categorylist .categorylist-item .categorybox {
+#megamenu .categorylist-item .categorybox {
   position: absolute;
   left: 100%;
   background: hsl(0, 0%, 100%);
   width: 16.25rem;
-  height: 100%;
   display: none;
-  z-index: 1000;
+  z-index: 3000;
   height: 100vh;
   overflow-y: scroll;
 }
-#megamenu .categorylist .categorylist-item .categorybox .subcategory {
+#megamenu .categorylist-item .categorybox .subcategory {
   list-style: none;
   padding-left: 0;
 }
-#megamenu .categorylist .categorylist-item .categorybox .subcategory .subcategory-item .subcategory-link {
+#megamenu .categorylist-item .categorybox .subcategory-link {
   display: flex;
   align-items: center;
   padding: 14px 18px;
   transition: all 0.3s ease;
 }
-#megamenu .categorylist .categorylist-item .categorybox .subcategory .subcategory-item .subcategory-link:hover {
+#megamenu .categorylist-item .categorybox .subcategory-link:hover {
   background: #eaf1ef;
 }
-#megamenu .categorylist .categorylist-item .categorybox .subcategory .subcategory-item .subcategory-link .text {
+#megamenu .categorylist-item .categorybox .subcategory-link .text {
   margin-left: 10px;
   width: 160px;
   font-family: "Jost", sans-serif;
@@ -1882,74 +1883,71 @@ nav.nav1 ul li ul li a:hover {
   font-style: normal;
   line-height: 1.6333333333;
 }
-#megamenu .categorylist .categorylist-item .box1 {
+#megamenu .categorylist-item .box1 {
   top: 0;
 }
-#megamenu .categorylist .categorylist-item .box2 {
+#megamenu .categorylist-item .box2 {
   top: -58px;
 }
-#megamenu .categorylist .categorylist-item .box3 {
+#megamenu .categorylist-item .box3 {
   top: -116px;
 }
-#megamenu .categorylist .categorylist-item .box4 {
+#megamenu .categorylist-item .box4 {
   top: -174px;
 }
-#megamenu .categorylist .categorylist-item .box5 {
+#megamenu .categorylist-item .box5 {
   top: -232px;
 }
-#megamenu .categorylist .categorylist-item .box6 {
+#megamenu .categorylist-item .box6 {
   top: -290px;
 }
-#megamenu .categorylist .categorylist-item .box7 {
+#megamenu .categorylist-item .box7 {
   top: -348px;
 }
-#megamenu .categorylist .categorylist-item .box8 {
+#megamenu .categorylist-item .box8 {
   top: -406px;
 }
-#megamenu .categorylist .categorylist-item .box9 {
+#megamenu .categorylist-item .box9 {
   top: -464px;
 }
-#megamenu .categorylist .categorylist-item .box10 {
+#megamenu .categorylist-item .box10 {
   top: -522px;
 }
-#megamenu .categorylist .categorylist-item .box11 {
+#megamenu .categorylist-item .box11 {
   top: -580px;
 }
-#megamenu .categorylist .categorylist-item .box12 {
+#megamenu .categorylist-item .box12 {
   top: -638px;
 }
-#megamenu .categorylist .categorylist-item .box13 {
+#megamenu .categorylist-item .box13 {
   top: -696px;
 }
-#megamenu .categorylist .categorylist-item .box14 {
+#megamenu .categorylist-item .box14 {
   top: -754px;
 }
-#megamenu .categorylist .categorylist-item .box15 {
+#megamenu .categorylist-item .box15 {
   top: -812px;
 }
-#megamenu .categorylist .categorylist-item .box16 {
+#megamenu .categorylist-item .box16 {
   top: -870px;
 }
-#megamenu .categorylist .categorylist-item .box17 {
+#megamenu .categorylist-item .box17 {
   top: -928px;
 }
-#megamenu .categorylist .categorylist-item .box18 {
+#megamenu .categorylist-item .box18 {
   top: -986px;
 }
-#megamenu .categorylist .categorylist-item .box19 {
+#megamenu .categorylist-item .box19 {
   top: -1044px;
 }
-#megamenu .categorylist .categorylist-item .box20 {
+#megamenu .categorylist-item .box20 {
   top: -1102px;
 }
-#megamenu .categorylist .categorylist-item:hover > .categorybox,
-#megamenu .categorylist .categorylist-item .categorybox:hover {
-  visibility: visible;
+#megamenu .categorylist .categorylist-item:hover > .categorybox {
   position: absolute;
-  z-index: 2000;
-  opacity: 1;
+  z-index: 4000;
   display: block;
-  min-width: 250px;
+  left: 100%;
   text-align: left;
 }
 

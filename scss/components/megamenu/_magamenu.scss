@@ -11,20 +11,26 @@
   font-style: normal;
   line-height: 1.6333333333;
 }
+
 #megamenu {
   width: 260px;
   ::-webkit-scrollbar {
     width: 5px;
   }
+
   ::-webkit-scrollbar-thumb {
     background: red;
     border-radius: 5px;
   }
   .categorylist {
     list-style: none;
+    position: fixed;
+    top: 0;
+    left: 0;
     padding: 0;
     height: 100vh;
-    overflow-y: scroll;
+    // overflow-y: auto;
+
     ::-webkit-scrollbar {
       width: 5px;
     }
@@ -32,7 +38,8 @@
       background: red;
       border-radius: 5px;
     }
-    .categorylist-item {
+
+    &-item {
       position: relative;
       .categorylist-link {
         @include flex-center-vert;
@@ -56,26 +63,24 @@
         left: 100%;
         background: hsl(0, 0%, 100%);
         width: 16.25rem;
-        height: 100%;
         display: none;
-        z-index: 1000;
+        z-index: 3000;
         height: 100vh;
         overflow-y: scroll;
 
         .subcategory {
           list-style: none;
           padding-left: 0;
-          .subcategory-item {
-            .subcategory-link {
-              @include flex-center-vert;
-              padding: 14px 18px;
-              transition: all 0.3s ease;
-              &:hover {
-                background: #eaf1ef;
-              }
-              .text {
-                @include spanText;
-              }
+
+          &-link {
+            @include flex-center-vert;
+            padding: 14px 18px;
+            transition: all 0.3s ease;
+            &:hover {
+              background: #eaf1ef;
+            }
+            .text {
+              @include spanText;
             }
           }
         }
@@ -142,14 +147,14 @@
       }
     }
 
-    .categorylist-item:hover > .categorybox,
-    .categorylist-item .categorybox:hover {
-      visibility: visible;
+    .categorylist-item:hover > .categorybox {
+      // visibility: visible;
       position: absolute;
-      z-index: 2000;
-      opacity: 1;
+      z-index: 4000;
+      // opacity: 1;
       display: block;
-      min-width: 250px;
+      left: 100%;
+      // min-width: 250px;
       text-align: left;
     }
   }
