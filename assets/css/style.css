@@ -1806,6 +1806,8 @@ nav.nav1 ul li ul li a:hover {
 #megamenu .categorylist {
   list-style: none;
   padding: 0;
+  height: 100vh;
+  overflow: scroll;
 }
 #megamenu .categorylist .categorylist-item {
   position: relative;
@@ -1834,13 +1836,14 @@ nav.nav1 ul li ul li a:hover {
 }
 #megamenu .categorylist .categorylist-item .categorybox {
   position: absolute;
-  top: 0;
   left: 100%;
   background: hsl(0, 0%, 100%);
   width: 16.25rem;
   height: 100%;
   display: none;
   z-index: 1000;
+  height: 100vh;
+  overflow: scroll;
 }
 #megamenu .categorylist .categorylist-item .categorybox .subcategory {
   list-style: none;
@@ -1865,9 +1868,71 @@ nav.nav1 ul li ul li a:hover {
   font-style: normal;
   line-height: 1.6333333333;
 }
+#megamenu .categorylist .categorylist-item .box1 {
+  top: 0;
+}
+#megamenu .categorylist .categorylist-item .box2 {
+  top: -58px;
+}
+#megamenu .categorylist .categorylist-item .box3 {
+  top: -116px;
+}
+#megamenu .categorylist .categorylist-item .box4 {
+  top: -174px;
+}
+#megamenu .categorylist .categorylist-item .box5 {
+  top: -232px;
+}
+#megamenu .categorylist .categorylist-item .box6 {
+  top: -290px;
+}
+#megamenu .categorylist .categorylist-item .box7 {
+  top: -348px;
+}
+#megamenu .categorylist .categorylist-item .box8 {
+  top: -406px;
+}
+#megamenu .categorylist .categorylist-item .box9 {
+  top: -464px;
+}
+#megamenu .categorylist .categorylist-item .box10 {
+  top: -522px;
+}
+#megamenu .categorylist .categorylist-item .box11 {
+  top: -580px;
+}
+#megamenu .categorylist .categorylist-item .box12 {
+  top: -638px;
+}
+#megamenu .categorylist .categorylist-item .box13 {
+  top: -696px;
+}
+#megamenu .categorylist .categorylist-item .box14 {
+  top: -754px;
+}
+#megamenu .categorylist .categorylist-item .box15 {
+  top: -812px;
+}
+#megamenu .categorylist .categorylist-item .box16 {
+  top: -870px;
+}
+#megamenu .categorylist .categorylist-item .box17 {
+  top: -928px;
+}
+#megamenu .categorylist .categorylist-item .box18 {
+  top: -986px;
+}
+#megamenu .categorylist .categorylist-item .box19 {
+  top: -1044px;
+}
+#megamenu .categorylist .categorylist-item .box20 {
+  top: -1102px;
+}
 #megamenu .categorylist .categorylist-item:hover > .categorybox,
 #megamenu .categorylist .categorylist-item .categorybox:hover {
   visibility: visible;
+  position: absolute;
+  z-index: 2000;
   opacity: 1;
   display: block;
   min-width: 250px;

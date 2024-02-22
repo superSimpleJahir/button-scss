@@ -17,6 +17,8 @@
   .categorylist {
     list-style: none;
     padding: 0;
+    height: 100vh;
+    overflow: scroll;
 
     .categorylist-item {
       position: relative;
@@ -39,13 +41,14 @@
 
       .categorybox {
         position: absolute;
-        top: 0;
         left: 100%;
         background: hsl(0, 0%, 100%);
         width: 16.25rem;
         height: 100%;
         display: none;
         z-index: 1000;
+        height: 100vh;
+        overflow: scroll;
 
         .subcategory {
           list-style: none;
@@ -65,11 +68,73 @@
           }
         }
       }
+      .box1 {
+        top: 0;
+      }
+      .box2 {
+        top: -58px;
+      }
+      .box3 {
+        top: -116px;
+      }
+      .box4 {
+        top: -174px;
+      }
+      .box5 {
+        top: -232px;
+      }
+      .box6 {
+        top: -290px;
+      }
+      .box7 {
+        top: -348px;
+      }
+      .box8 {
+        top: -406px;
+      }
+      .box9 {
+        top: -464px;
+      }
+      .box10 {
+        top: -522px;
+      }
+      .box11 {
+        top: -580px;
+      }
+      .box12 {
+        top: -638px;
+      }
+      .box13 {
+        top: -696px;
+      }
+      .box14 {
+        top: -754px;
+      }
+      .box15 {
+        top: -812px;
+      }
+      .box16 {
+        top: -870px;
+      }
+      .box17 {
+        top: -928px;
+      }
+      .box18 {
+        top: -986px;
+      }
+      .box19 {
+        top: -1044px;
+      }
+      .box20 {
+        top: -1102px;
+      }
     }
 
     .categorylist-item:hover > .categorybox,
     .categorylist-item .categorybox:hover {
       visibility: visible;
+      position: absolute;
+      z-index: 2000;
       opacity: 1;
       display: block;
       min-width: 250px;
