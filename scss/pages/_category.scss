@@ -267,3 +267,24 @@
     }
   }
 }
+
+.cv {
+  @include flex-start;
+  align-items: center;
+  gap: 20px;
+  &-title {
+    font-family: $primaryfont;
+  }
+  &-input {
+    display: none;
+  }
+  &-label {
+    @include flex-start;
+    background-color: #f7f7f8;
+    padding: 10px 15px;
+    @include radius(5);
+    @include border(solid, 1, rgb(230, 230, 231));
+    gap: 5px;
+    cursor: pointer;
+  }
+}

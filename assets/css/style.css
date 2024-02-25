@@ -3860,6 +3860,31 @@ table tr td {
   color: #19191a;
 }
 
+.cv {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+.cv-title {
+  font-family: "Jost", sans-serif;
+}
+.cv-input {
+  display: none;
+}
+.cv-label {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background-color: #f7f7f8;
+  padding: 10px 15px;
+  border-radius: 0.3125rem;
+  border: solid 0.0625rem rgb(230, 230, 231);
+  gap: 5px;
+  cursor: pointer;
+}
+
 .services {
   padding: 3.125rem 0rem;
 }
