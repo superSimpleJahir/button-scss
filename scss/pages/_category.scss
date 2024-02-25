@@ -200,3 +200,70 @@
     }
   }
 }
+
+.custom-4 {
+  margin-bottom: 8px;
+  .custom-input4 {
+    &:checked ~ .checklabel {
+      color: $badgetext-2;
+      font-weight: 500;
+
+      &::before {
+        background: $badgetext-2;
+        border-color: $white;
+      }
+
+      &::after {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  .checklabel {
+    cursor: pointer;
+    color: $neutral-500;
+    font-size: size(18);
+    font-weight: 400;
+    line-height: 1.4;
+    padding-left: size(30);
+    position: relative;
+
+    @include breakpoint(desktop1400) {
+      font-size: size(14);
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      @include translateY(-50%);
+      @include transitionsall;
+    }
+
+    &::before {
+      background: $white;
+      @include border(solid, 1, $checkborder);
+      @include radius(5);
+      @include square(25);
+    }
+
+    &::after {
+      width: size(7);
+      height: size(12);
+      @include border(solid, 3, $white);
+      border-top: 0;
+      border-left: 0;
+      left: size(1.5);
+      @include transform(rotate(45deg) translateY(-90%));
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    &::selection {
+      @include setBgColor($white, $neutral-950);
+    }
+  }
+}

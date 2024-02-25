@@ -3796,6 +3796,70 @@ table tr td {
   color: #19191a;
 }
 
+.custom-4 {
+  margin-bottom: 8px;
+}
+.custom-4 .custom-input4:checked ~ .checklabel {
+  color: #6e6bdc;
+  font-weight: 500;
+}
+.custom-4 .custom-input4:checked ~ .checklabel::before {
+  background: #6e6bdc;
+  border-color: hsl(0, 0%, 100%);
+}
+.custom-4 .custom-input4:checked ~ .checklabel::after {
+  opacity: 1;
+  visibility: visible;
+}
+.custom-4 .checklabel {
+  cursor: pointer;
+  color: #6a6b70;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.4;
+  padding-left: 1.875rem;
+  position: relative;
+}
+@media screen and (min-width: 87.5rem) {
+  .custom-4 .checklabel {
+    font-size: 0.875rem;
+  }
+}
+.custom-4 .checklabel::before, .custom-4 .checklabel::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  transition: all 350ms ease-in-out;
+}
+.custom-4 .checklabel::before {
+  background: hsl(0, 0%, 100%);
+  border: solid 0.0625rem #e7eaef;
+  border-radius: 0.3125rem;
+  width: 1.5625rem;
+  height: 1.5625rem;
+}
+.custom-4 .checklabel::after {
+  width: 0.4375rem;
+  height: 0.75rem;
+  border: solid 0.1875rem hsl(0, 0%, 100%);
+  border-top: 0;
+  border-left: 0;
+  left: 0.09375rem;
+  transform: rotate(45deg) translateY(-90%);
+  opacity: 0;
+  visibility: hidden;
+}
+.custom-4 .checklabel::-moz-selection {
+  background: hsl(0, 0%, 100%);
+  color: #19191a;
+}
+.custom-4 .checklabel::selection {
+  background: hsl(0, 0%, 100%);
+  color: #19191a;
+}
+
 .services {
   padding: 3.125rem 0rem;
 }
