@@ -1,73 +1,15 @@
 @use "../global" as *;
 @use "../partials" as *;
 
-.categorysection {
-  padding: size(48) size(8) size(64);
-
-  @include breakpoint(mobile768) {
-    padding: size(64) size(8);
-  }
-
-  @include breakpoint(tab992) {
-    padding: size(80) size(8);
-  }
-}
-
-.categorysidebar {
-  @include border(solid, 1, $inputborder);
-  @include radius(20);
-  
-  @include breakpoint(mobile768) {
-    overflow: hidden;
-  }
-
-  &-header {
-    @include border-single(bottom, solid, 1, $inputborder);
-    padding: size(12) size(16);
-
-    .sidebartitle {
-      color: $neutral-950;
-      font-size: size(16);
-      font-weight: 600;
-      line-height: 1.75;
-    }
-  }
-
-  &-body {
-    @include flex-column;
-    gap: size(24);
-    padding: size(16) size(16) size(20);
-  
-    .categoryfilter {
-      @include flex-column;
-      gap: size(12);
-
-      &-header {
-        .categorytitle {
-          color: $neutral-950;
-          font-size: size(16);
-          font-weight: 600;
-          line-height: 1.75;
-        }
-      }
-
-      &-body {
-        @include flex-column;
-        gap: size(12);
-      }
-    }
-  }
-}
-
-.categorycheck {
-  .checkinput {
+.custom-1 {
+  .custom-input1 {
     &:checked ~ .checklabel {
-      color: $neutral-950;
-      font-weight: 500;
+      color: $danger;
+      font-weight: 600;
 
       &::before {
-        background: $blue-green-50;
-        border-color: $blue-green-600;
+        background: $danger;
+        border-color: $white;
       }
 
       &::after {
@@ -85,14 +27,14 @@
     line-height: 1.4;
     padding-left: size(26);
     position: relative;
-  
+
     @include breakpoint(desktop1400) {
       font-size: size(14);
     }
 
     &::before,
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       top: 50%;
       left: 0;
@@ -110,7 +52,7 @@
     &::after {
       width: size(5);
       height: size(9);
-      @include border(solid, 1, $blue-green-600);
+      @include border(solid, 1, $white);
       border-top: 0;
       border-left: 0;
       left: size(1.5);
@@ -125,120 +67,68 @@
   }
 }
 
-.catategorydetails {
-  &-header {
-    @include border-single(bottom, solid, 1, $inputborder);
-    @include flex-center-between;
-    padding-bottom: size(16);
+.custom-2 {
+  .custom-input2 {
+    &:checked ~ .checklabel {
+      color: $badgetext-2;
+      font-weight: 500;
 
-    .leftinfo {
-      .ctgdetailtitle {
-        color: $blue-green-600;
-        font-size: size(20);
-        font-weight: 600;
-        line-height: 1.4;
-        
-        @include breakpoint(mobile768) {
-          font-size: size(24);
-        }
+      &::before {
+        background: $badgetext-2;
+        border-color: $white;
       }
 
-      .ctgtext {
-        color: $neutral-500;
-        font-size: size(12);
-        font-weight: 400;
-        
-        @include breakpoint(mobile768) {
-          font-size: size(13);
-        }
-      }
-    }
-
-    .rightinfo {
-      @include flex-center-vert;
-      gap: size(12);
-
-      .navtitle {
-        color: $neutral-400;
-        font-size: size(13);
-        font-weight: 400;  
-      }
-
-      .nav-tabs {
-        border: none;
-        gap: size(12);
-
-        .nav-link {
-          @include square(24);
-          @include flex-center;
-          margin: 0;
-          border: none;
-
-          svg {
-            rect {
-              fill: $tabsvg;
-            }
-          }
-
-          &.active {
-            svg {
-              rect {
-                fill: $activetabsvg;
-              }
-            }
-          }
-        }
-      }
-
-      .btn-view {
-        @include square(24);
-        @include flex-center;
-
-        svg {
-          path {
-            fill: $tabsvg;
-          }
-        }
-
-        @include hover {
-          svg {
-            path {
-              fill: $activetabsvg;
-            }
-          }
-        }
-      }
-
-      .offcanvas {
-        &-header {
-          @include border-single(bottom, solid, 1, $inputborder);
-
-          .sidebartitle {
-            color: $neutral-950;
-            font-size: size(16);
-            font-weight: 600;
-            line-height: 1.75;
-          }
-        }
-
-        &-body {
-          padding-top: size(0);
-          
-          .categorysidebar {
-            padding: 0;
-            border: none;
-            @include radius(0);
-
-            &-body {
-              padding: 0;
-            }
-          }
-        }
+      &::after {
+        opacity: 1;
+        visibility: visible;
       }
     }
   }
 
-  &-body {
-    padding: size(24) size(0);
+  .checklabel {
+    cursor: pointer;
+    color: $neutral-500;
+    font-size: size(12);
+    font-weight: 400;
+    line-height: 1.4;
+    padding-left: size(26);
+    position: relative;
+
+    @include breakpoint(desktop1400) {
+      font-size: size(14);
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      @include translateY(-50%);
+      @include transitionsall;
+    }
+
+    &::before {
+      background: $white;
+      @include border(solid, 1, $checkborder);
+      @include radius(4);
+      @include square(18);
+    }
+
+    &::after {
+      width: size(5);
+      height: size(9);
+      @include border(solid, 1, $white);
+      border-top: 0;
+      border-left: 0;
+      left: size(1.5);
+      @include transform(rotate(45deg) translateY(-90%));
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    &::selection {
+      @include setBgColor($white, $neutral-950);
+    }
   }
 }

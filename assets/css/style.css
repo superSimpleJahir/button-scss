@@ -3607,75 +3607,19 @@ table tr td {
   line-height: 1.625;
 }
 
-.categorysection {
-  padding: 3rem 0.5rem 4rem;
-}
-@media screen and (min-width: 48rem) {
-  .categorysection {
-    padding: 4rem 0.5rem;
-  }
-}
-@media screen and (min-width: 62rem) {
-  .categorysection {
-    padding: 5rem 0.5rem;
-  }
-}
-
-.categorysidebar {
-  border: solid 0.0625rem #f1f1f1;
-  border-radius: 1.25rem;
-}
-@media screen and (min-width: 48rem) {
-  .categorysidebar {
-    overflow: hidden;
-  }
-}
-.categorysidebar-header {
-  border-bottom: solid 0.0625rem #f1f1f1;
-  padding: 0.75rem 1rem;
-}
-.categorysidebar-header .sidebartitle {
-  color: #19191a;
-  font-size: 1rem;
+.custom-1 .custom-input1:checked ~ .checklabel {
+  color: hsl(0, 91%, 54%);
   font-weight: 600;
-  line-height: 1.75;
 }
-.categorysidebar-body {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  padding: 1rem 1rem 1.25rem;
+.custom-1 .custom-input1:checked ~ .checklabel::before {
+  background: hsl(0, 91%, 54%);
+  border-color: hsl(0, 0%, 100%);
 }
-.categorysidebar-body .categoryfilter {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-.categorysidebar-body .categoryfilter-header .categorytitle {
-  color: #19191a;
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 1.75;
-}
-.categorysidebar-body .categoryfilter-body {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.categorycheck .checkinput:checked ~ .checklabel {
-  color: #19191a;
-  font-weight: 500;
-}
-.categorycheck .checkinput:checked ~ .checklabel::before {
-  background: #f1f9fe;
-  border-color: #107cb9;
-}
-.categorycheck .checkinput:checked ~ .checklabel::after {
+.custom-1 .custom-input1:checked ~ .checklabel::after {
   opacity: 1;
   visibility: visible;
 }
-.categorycheck .checklabel {
+.custom-1 .checklabel {
   cursor: pointer;
   color: #6a6b70;
   font-size: 0.75rem;
@@ -3685,11 +3629,11 @@ table tr td {
   position: relative;
 }
 @media screen and (min-width: 87.5rem) {
-  .categorycheck .checklabel {
+  .custom-1 .checklabel {
     font-size: 0.875rem;
   }
 }
-.categorycheck .checklabel::before, .categorycheck .checklabel::after {
+.custom-1 .checklabel::before, .custom-1 .checklabel::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -3697,17 +3641,17 @@ table tr td {
   transform: translateY(-50%);
   transition: all 350ms ease-in-out;
 }
-.categorycheck .checklabel::before {
+.custom-1 .checklabel::before {
   background: hsl(0, 0%, 100%);
   border: solid 0.0625rem #e7eaef;
   border-radius: 0.25rem;
   width: 1.125rem;
   height: 1.125rem;
 }
-.categorycheck .checklabel::after {
+.custom-1 .checklabel::after {
   width: 0.3125rem;
   height: 0.5625rem;
-  border: solid 0.0625rem #107cb9;
+  border: solid 0.0625rem hsl(0, 0%, 100%);
   border-top: 0;
   border-left: 0;
   left: 0.09375rem;
@@ -3715,107 +3659,74 @@ table tr td {
   opacity: 0;
   visibility: hidden;
 }
-.categorycheck .checklabel::-moz-selection {
+.custom-1 .checklabel::-moz-selection {
   background: hsl(0, 0%, 100%);
   color: #19191a;
 }
-.categorycheck .checklabel::selection {
+.custom-1 .checklabel::selection {
   background: hsl(0, 0%, 100%);
   color: #19191a;
 }
 
-.catategorydetails-header {
-  border-bottom: solid 0.0625rem #f1f1f1;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 1rem;
+.custom-2 .custom-input2:checked ~ .checklabel {
+  color: #6e6bdc;
+  font-weight: 500;
 }
-.catategorydetails-header .leftinfo .ctgdetailtitle {
-  color: #107cb9;
-  font-size: 1.25rem;
-  font-weight: 600;
-  line-height: 1.4;
+.custom-2 .custom-input2:checked ~ .checklabel::before {
+  background: #6e6bdc;
+  border-color: hsl(0, 0%, 100%);
 }
-@media screen and (min-width: 48rem) {
-  .catategorydetails-header .leftinfo .ctgdetailtitle {
-    font-size: 1.5rem;
-  }
+.custom-2 .custom-input2:checked ~ .checklabel::after {
+  opacity: 1;
+  visibility: visible;
 }
-.catategorydetails-header .leftinfo .ctgtext {
+.custom-2 .checklabel {
+  cursor: pointer;
   color: #6a6b70;
   font-size: 0.75rem;
   font-weight: 400;
+  line-height: 1.4;
+  padding-left: 1.625rem;
+  position: relative;
 }
-@media screen and (min-width: 48rem) {
-  .catategorydetails-header .leftinfo .ctgtext {
-    font-size: 0.8125rem;
+@media screen and (min-width: 87.5rem) {
+  .custom-2 .checklabel {
+    font-size: 0.875rem;
   }
 }
-.catategorydetails-header .rightinfo {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
+.custom-2 .checklabel::before, .custom-2 .checklabel::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  transition: all 350ms ease-in-out;
 }
-.catategorydetails-header .rightinfo .navtitle {
-  color: #85868b;
-  font-size: 0.8125rem;
-  font-weight: 400;
+.custom-2 .checklabel::before {
+  background: hsl(0, 0%, 100%);
+  border: solid 0.0625rem #e7eaef;
+  border-radius: 0.25rem;
+  width: 1.125rem;
+  height: 1.125rem;
 }
-.catategorydetails-header .rightinfo .nav-tabs {
-  border: none;
-  gap: 0.75rem;
+.custom-2 .checklabel::after {
+  width: 0.3125rem;
+  height: 0.5625rem;
+  border: solid 0.0625rem hsl(0, 0%, 100%);
+  border-top: 0;
+  border-left: 0;
+  left: 0.09375rem;
+  transform: rotate(45deg) translateY(-90%);
+  opacity: 0;
+  visibility: hidden;
 }
-.catategorydetails-header .rightinfo .nav-tabs .nav-link {
-  width: 1.5rem;
-  height: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  border: none;
-}
-.catategorydetails-header .rightinfo .nav-tabs .nav-link svg rect {
-  fill: #d9d9d9;
-}
-.catategorydetails-header .rightinfo .nav-tabs .nav-link.active svg rect {
-  fill: #85868b;
-}
-.catategorydetails-header .rightinfo .btn-view {
-  width: 1.5rem;
-  height: 1.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.catategorydetails-header .rightinfo .btn-view svg path {
-  fill: #d9d9d9;
-}
-.catategorydetails-header .rightinfo .btn-view:not([disabled]):hover svg path {
-  fill: #85868b;
-}
-.catategorydetails-header .rightinfo .offcanvas-header {
-  border-bottom: solid 0.0625rem #f1f1f1;
-}
-.catategorydetails-header .rightinfo .offcanvas-header .sidebartitle {
+.custom-2 .checklabel::-moz-selection {
+  background: hsl(0, 0%, 100%);
   color: #19191a;
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 1.75;
 }
-.catategorydetails-header .rightinfo .offcanvas-body {
-  padding-top: 0rem;
-}
-.catategorydetails-header .rightinfo .offcanvas-body .categorysidebar {
-  padding: 0;
-  border: none;
-  border-radius: 0rem;
-}
-.catategorydetails-header .rightinfo .offcanvas-body .categorysidebar-body {
-  padding: 0;
-}
-.catategorydetails-body {
-  padding: 1.5rem 0rem;
+.custom-2 .checklabel::selection {
+  background: hsl(0, 0%, 100%);
+  color: #19191a;
 }
 
 .services {
