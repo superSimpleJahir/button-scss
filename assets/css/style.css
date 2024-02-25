@@ -3607,6 +3607,9 @@ table tr td {
   line-height: 1.625;
 }
 
+.custom-1 {
+  margin-bottom: 5px;
+}
 .custom-1 .custom-input1:checked ~ .checklabel {
   color: hsl(0, 91%, 54%);
   font-weight: 600;
@@ -3622,7 +3625,7 @@ table tr td {
 .custom-1 .checklabel {
   cursor: pointer;
   color: #6a6b70;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.4;
   padding-left: 1.625rem;
@@ -3645,13 +3648,13 @@ table tr td {
   background: hsl(0, 0%, 100%);
   border: solid 0.0625rem #e7eaef;
   border-radius: 0.25rem;
-  width: 1.125rem;
-  height: 1.125rem;
+  width: 1.375rem;
+  height: 1.375rem;
 }
 .custom-1 .checklabel::after {
   width: 0.3125rem;
   height: 0.5625rem;
-  border: solid 0.0625rem hsl(0, 0%, 100%);
+  border: solid 0.125rem hsl(0, 0%, 100%);
   border-top: 0;
   border-left: 0;
   left: 0.09375rem;
@@ -3712,7 +3715,7 @@ table tr td {
 .custom-2 .checklabel::after {
   width: 0.3125rem;
   height: 0.5625rem;
-  border: solid 0.0625rem hsl(0, 0%, 100%);
+  border: solid 0.125rem hsl(0, 0%, 100%);
   border-top: 0;
   border-left: 0;
   left: 0.09375rem;
@@ -3725,6 +3728,70 @@ table tr td {
   color: #19191a;
 }
 .custom-2 .checklabel::selection {
+  background: hsl(0, 0%, 100%);
+  color: #19191a;
+}
+
+.custom-3 {
+  margin-bottom: 8px;
+}
+.custom-3 .custom-input3:checked ~ .checklabel {
+  color: #6e6bdc;
+  font-weight: 500;
+}
+.custom-3 .custom-input3:checked ~ .checklabel::before {
+  background: #6e6bdc;
+  border-color: hsl(0, 0%, 100%);
+}
+.custom-3 .custom-input3:checked ~ .checklabel::after {
+  opacity: 1;
+  visibility: visible;
+}
+.custom-3 .checklabel {
+  cursor: pointer;
+  color: #6a6b70;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  padding-left: 1.625rem;
+  position: relative;
+}
+@media screen and (min-width: 87.5rem) {
+  .custom-3 .checklabel {
+    font-size: 0.875rem;
+  }
+}
+.custom-3 .checklabel::before, .custom-3 .checklabel::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  transition: all 350ms ease-in-out;
+}
+.custom-3 .checklabel::before {
+  background: hsl(0, 0%, 100%);
+  border: solid 0.0625rem #e7eaef;
+  border-radius: 0.25rem;
+  width: 1.4375rem;
+  height: 1.4375rem;
+}
+.custom-3 .checklabel::after {
+  width: 0.375rem;
+  height: 0.6875rem;
+  border: solid 0.15625rem hsl(0, 0%, 100%);
+  border-top: 0;
+  border-left: 0;
+  left: 0.09375rem;
+  transform: rotate(45deg) translateY(-90%);
+  opacity: 0;
+  visibility: hidden;
+}
+.custom-3 .checklabel::-moz-selection {
+  background: hsl(0, 0%, 100%);
+  color: #19191a;
+}
+.custom-3 .checklabel::selection {
   background: hsl(0, 0%, 100%);
   color: #19191a;
 }
